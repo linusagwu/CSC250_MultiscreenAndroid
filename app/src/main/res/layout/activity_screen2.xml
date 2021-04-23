@@ -11,13 +11,20 @@
         android:id="@+id/nameTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Screen 2"
+        android:text="Factorial"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/FacTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
         android:textSize="36sp" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/S_rootButton2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onNextScreenButtonPressed"
-        android:text="GoTo Screen 3" />
+        android:text="Screen 3 S_Root" />
 </LinearLayout>

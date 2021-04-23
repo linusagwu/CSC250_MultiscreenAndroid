@@ -13,4 +13,10 @@
         android:layout_height="wrap_content"
         android:text="Screen3"
         android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/S_RootTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="36sp" />
 </LinearLayout>

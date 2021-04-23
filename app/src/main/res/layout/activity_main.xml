@@ -9,15 +9,25 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:text="Enter a number"
+        android:textSize="30sp" />
+
+    <EditText
+        android:id="@+id/imputTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/FactorialButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:onClick="onNextScreenButtonClicked"
-        android:text="Go to screen 2" />
+        android:text="screen 2 Fac" />
+
 
 </LinearLayout>

@@ -9,38 +9,35 @@ import android.widget.TextView;
 
 public class Screen2 extends AppCompatActivity
 {
-    private String name;
+    private TextView Fac_Text;
+
+    private int factorial(int n)
+    {
+        if(n == 1)
+        {
+            return 1;
+        }
+        return n* factorial(n-1);
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen2);
 
-        TextView nameTV = this.findViewById(R.id.nameTV);
-        //Intent myIntent = this.getIntent();
-       // this.name = myIntent.getStringExtra("name");
-        //int counter = myIntent.getIntExtra("counter", -1);
-        nameTV.setText(MySingleton.name + ": " + MySingleton.counter);
+        int fac = MySingleton.fac;
+        int answer = factorial(fac);
+        this.Fac_Text = this.findViewById(R.id.FacTV);
+        this.Fac_Text.setText(answer + "");
+        MySingleton.S_root = answer;
+
     }
 
-    @Override
-    protected void onPause()
-    {
-        super.onPause();
-    }
-
-    @Override
-    protected void onStop()
-    {
-        super.onStop();
-        TextView nameTV = this.findViewById(R.id.nameTV);
-        nameTV.setText("woot");
-    }
 
     public void onNextScreenButtonPressed(View v)
     {
         Intent i = new Intent(this,Screen3.class);
-        //i.putExtra("name", this.name);
         this.startActivity(i);
     }
 
